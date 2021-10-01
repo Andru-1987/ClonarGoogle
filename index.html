@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GoogleClone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="headerContainer">
+
+
+        <a href="#">Gmail</a>
+        <a href="#">Imágenes</a>
+        <svg class="matrix" ><path fill='#9aa0a6' d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+        <button type="button" class="iniciarSesion">Iniciar sesión</button>
+      </div>
+    </header>
+
+<section class="googleType">
+
+
+    <div class="imagenGoogle">
+          <img class="googleLogo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+    </div>
+</section>
+
+
+  <section class="middleSearch">
+        <div class="searchContainer">
+          <div class="search">
+            <div class="searchIcon">
+              <svg class='magIcon'><path fill='#9aa0a6'd="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            </div>
+          <input class="inputQuery typing" maxlength="200">
+                <div class="micIcon"><svg class="mic">
+                  <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path>
+                  <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                  <path fill="#fbbc04" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"></path>
+                  <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"></path>
+                </svg>
+              </div>
+            </div>
+        </div>
+
+            <div class="downSearch">
+              <div class="center">
+                <button type="button" class="googleBtn" name="button">Buscar con Google</button>
+              <button type="button" class="googleBtn" name="button">Me siento con suerte</button>
+              </div>
+                  <div class="centerLegend">
+                    <span class="textoOffer">Ofrecido por Google en:</span>
+
+                    <a href="#" class="lang">Español (Latinoamérica)</a>
+                  </div>
+          </div>
+</section>
+
+<section class="empty">
+</section>
+
+
+
+<footer>
+
+
+</footer>
+
+<div class="footerContainer">
+  <div class="pais">
+    <span>Argentina</span>
+  </div>
+
+  <div class="adsBottom">
+    <div class="ads">
+    <a href="#">Publicidad</a>
+      <a href="#">Negocios</a>
+      <a href="#">Sobre Google</a>
+      <a href="#">Como funciona la Búsqueda</a>
+    </div>
+    <div class="terms">
+      <a href="#">Privacidad</a>
+      <a href="#">Condiciones</a>
+      <a href="#">Preferencias</a>
+    </div>
+  </div>
+
+</div>
+<script>
+
+  // Esto es solo para practicar
+  const texts=['Armando por Anderson Ocaña'];
+  let cont=0;
+  let index=0;
+  let currentText='';
+  let letter='';
+
+(function type(){
+  if (cont===texts.length) {
+    cont=0;
+  }
+  currentText=texts[cont];
+
+  letter=currentText.slice(0,++index);
+  document.querySelector('.typing').value=letter;
+
+  if(letter.length===currentText.length){
+    cont++;
+    index=0;
+  }
+  setTimeout(type,200);
+})();
+</script>
+
+</body>
+</html>
