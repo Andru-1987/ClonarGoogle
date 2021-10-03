@@ -83,16 +83,19 @@ header div a{
   max-height: 300px;
 }
 
+
 .imagenGoogle{
   display:flex;
   justify-content: center;
   align-items: flex-end;
-
+  padding: 10px;
+  margin-bottom: 10px;
 }
   .googleLogo{
   display:flex;
   width:auto;
-  height:90px;
+  max-height:90px;
+  object-fit: contain;
   }
 
 
